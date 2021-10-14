@@ -11,10 +11,23 @@ public class EC6 {
         boolean y = sc.hasNextBoolean();
         boolean s =y && ((x >= 10) && (x <= 20)) || (y && ((x >= 15) && (x <= 25)));
         boolean fins = y && (x <= 15) && (x >= 25);
-        if (s)  {
-            System.out.println("La fiesta fue un exito.");
+
+        boolean exito;
+        if (s) {
+            if (x >= 15 && x <= 25) {
+                exito = true;
+            } else {
+                exito = false;
+            }
         } else {
-            System.out.println("La fiesta es un fiasco.");
+            if (x >= 15 && x <= 25) {
+                exito = true;
+            } else {
+                exito = false;
+            }
+
+
         }
+
     }
 }
