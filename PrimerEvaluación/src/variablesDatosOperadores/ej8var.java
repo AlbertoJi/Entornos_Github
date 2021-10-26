@@ -13,7 +13,11 @@ public class ej8var {
         int horas = ti / 3600;
         int minutos = ti % 60;
         int seg = ti / 3600;
-        System.out.println(ti + " minutos son " + horas + " horas y " + minutos + " minutos y " + seg + " segundos");
 
+        if ((seg >= 1) && (horas >= 0) && (minutos >= 0)) {
+                System.out.println(ti + " minutos son " + horas + " horas y " + minutos + " minutos y " + seg + " segundos");
+        } else {
+                System.out.println("Error 404");
+        }
     }
 }

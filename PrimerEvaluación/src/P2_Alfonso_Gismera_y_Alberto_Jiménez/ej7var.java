@@ -1,7 +1,8 @@
-package variablesDatosOperadores;
-
+package P2_Alfonso_Gismera_y_Alberto_Jiménez;
+/**
+ *@author 1daw : Alfonso Fco Gismera y Alberto Jiménez
+ */
 import java.util.Scanner;
-
 //    Realiza un programa que reciba una cantidad de minutos y muestre por pantalla a
 //    cuantas horas y minutos corresponde. Por ejemplo: 1000 minutos son 16 horas y 40
 //    minutos.

@@ -1,5 +1,7 @@
-package variablesDatosOperadores;
-
+package P2_Alfonso_Gismera_y_Alberto_Jiménez;
+/**
+ *@author 1daw : Alfonso Fco Gismera y Alberto Jiménez
+ */
 import java.util.Scanner;
 
 public class ej6var {
