@@ -20,6 +20,7 @@ public class ej6var {
             System.out.println("le corresponde a cada ardilla " + co + " nueces" +" Y sobran " + resto + " nueces");
         } else {
             System.out.println("Error 404");
+
         }
     }
 

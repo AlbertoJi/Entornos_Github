@@ -21,5 +21,8 @@ public class EC28 {
             }
             System.out.println();
         }
+//        no = int(input("Introduce la altura del triángulo (entero positivo): "))
+//        for ig in range(no):
+//        print("*"*(ig+1))
     }
 }
