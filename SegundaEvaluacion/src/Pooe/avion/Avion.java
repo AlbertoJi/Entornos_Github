@@ -1,2 +1,4 @@
-package Pooe.avion;public class Avion {
+package Pooe.avion;
+
+public class Avion {
 }

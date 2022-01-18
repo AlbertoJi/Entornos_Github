@@ -1,0 +1,47 @@
+@startuml
+
+title Plataforma de apredizaje
+
+
+class Persona {
+  #String nombre
+  #String dirección
+  #String teléfono
+  #String alias
+  #String email
+}
+
+class Alumno{
+  - float notaMedia
+  + getNotaMedia():float
+  +setNotaMedia(float nuevaNota):void
+  +emitirCertificado():void
+  +calcularNotaMedia():float
+}
+Persona <|--Alumno
+
+class Profesor{
+  - String NRP
+  + getNRP():String
+  + setNRP(String nuevoNRP):void
+}
+
+Persona <|--Profesor
+
+class Módulo{
+  - String nombre
+  - int duración
+  - String contenidos
+  + getNombre():String
+  + setNombre(String n):void
+  + getDuración():int
+  + setDuración(int d):void
+  + getContenidos():String
+  + setContenidos(String c):void
+  + matricular(Alumno a):void
+  + asignarDuración(int d):void
+}
+Alumno "0..*" -- "1..*" Módulo : se matricula en
+Profesor "1" -- "1..*" Módulo : imparte
+
+@enduml

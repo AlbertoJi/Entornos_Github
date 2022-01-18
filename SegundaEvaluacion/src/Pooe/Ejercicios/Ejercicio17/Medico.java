@@ -1,12 +1,12 @@
 package Pooe.Ejercicios.Ejercicio17;
 
-public class Caballero {
+public class Medico {
     private String nombre;
-    static int unidades;
+    static int medicos;
 
-    public Caballero(String nombre) {
+    public Medico(String nombre) {
         this.nombre = nombre;
-        unidades++;
+        medicos++;
     }
 
     public String getNombre() {

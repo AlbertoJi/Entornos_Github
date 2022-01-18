@@ -1,12 +1,12 @@
 package Pooe.Ejercicios.Ejercicio17;
 
-public class Caballero {
+public class General {
     private String nombre;
-    static int unidades;
+    static int generales;
 
-    public Caballero(String nombre) {
+    public General(String nombre) {
         this.nombre = nombre;
-        unidades++;
+        generales++;
     }
 
     public String getNombre() {
