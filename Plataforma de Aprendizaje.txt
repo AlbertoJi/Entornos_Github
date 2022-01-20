@@ -1,0 +1,60 @@
+                                         ,-----------------.                                      
+                                         |Persona          |                                      
+                                         |-----------------|                                      
+                                         |#String nombre   |                                      
+                                         |#String dirección|                                      
+                                         |#String teléfono |                                      
+                                         |#String alias    |                                      
+                                         |#String email    |                                      
+                                         `-----------------'                                      
+                                                                                                  
+                                                                                                  
+              ,-----------------------------------.                                               
+              |Alumno                             |   ,------------------------------.            
+              |-----------------------------------|   |Profesor                      |            
+              |- float notaMedia                  |   |------------------------------|            
+              |+ getNotaMedia():float             |   |- String NRP                  |            
+              |+setNotaMedia(float nuevaNota):void|   |+ getNRP():String             |            
+              |+emitirCertificado():void          |   |+ setNRP(String nuevoNRP):void|            
+              |+calcularNotaMedia():float         |   `------------------------------'            
+              `-----------------------------------'                                               
+                                                                                                  
+                                   ,------------------------------.                               
+                                   |Módulo                        |                               
+                                   |------------------------------|                               
+                                   |- String nombre               |                               
+                                   |- int duración                |                               
+                                   |- String contenidos           |                               
+                                   |+ getNombre():String          |                               
+                                   |+ setNombre(String n):void    |                               
+                                   |+ getDuración():int           |                               
+                                   |+ setDuración(int d):void     |                               
+                                   |+ getContenidos():String      |                               
+                                   |+ setContenidos(String c):void|                               
+                                   |+ matricular(Alumno a):void   |                               
+                                   |+ asignarDuración(int d):void |                               
+                                   `------------------------------'                               
+                                                   |                                              
+                                                                                                  
+ ,-------------------------------.      ,--------------------.   ,-------------------------------.
+ |Competencia                    |      |Examen              |   |Tarea                          |
+ |-------------------------------|      |--------------------|   |-------------------------------|
+ |- String descripcion           |      |+ calificar():double|   |- String descripcion           |
+ |+ getDescripcion():String      |      |+ anadirPregunta()  |   |+ getDescripcion():String      |
+ |+ setDescripcion(String d):void|      |+ ordenarPregunta() |   |+ setDescripcion(String d):void|
+ `-------------------------------'      |+ crearExamen()     |   `-------------------------------'
+                                        `--------------------'                                    
+                                                                                                  
+,-------------------------------.  ,--------------------------------.                             
+|CicloFormativo                 |  |Pregunta                        |                             
+|-------------------------------|  |--------------------------------|                             
+|- String nombre                |  |- String enunciado              |                             
+|- String descripcion           |  |- String[] respuestas           |                             
+|- int horas                    |  |- int respuestaValida           |                             
+|+ getNombre():String           |  |+ getEnunciado():String         |                             
+|+ setNombre(String n):void     |  |+ setEnunciado(String e):void   |                             
+|+ getDescripcion(): String     |  |+ getRespuestas(): String[]     |                             
+|+ setDescripcion(String d):void|  |+ setRespuestas(String []):void |                             
+|+ getHoras():int               |  |+ getRespuestaValida():int      |                             
+|+ setHoras(int h):void         |  |+ setRespuestaValida(int r):void|                             
+`-------------------------------'  `--------------------------------'   
