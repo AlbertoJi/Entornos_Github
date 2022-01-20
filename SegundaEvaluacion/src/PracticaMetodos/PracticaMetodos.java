@@ -1,5 +1,6 @@
 package PracticaMetodos;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -25,11 +26,7 @@ public class PracticaMetodos {
             ResolverEjercicio(opción);
             System.out.println("Quieres resolver otro (s/n)");
             char respuesta = sc.next().charAt(0);
-            if (respuesta == 's' || respuesta == 'S'){
-                salir = false;
-            } else {
-                salir = true;
-            }
+            salir = respuesta != 's' && respuesta != 'S';
             
         } while (!salir);
     }
@@ -147,7 +144,7 @@ public class PracticaMetodos {
         System.out.println("Cadena a pasar como argumento:");
         String arg = sc.next();
         sc.nextLine();
-        System.out.println(print(arg));
+        print(arg);
         System.out.println("Llamada del segundo metodo");
         System.out.println("=========================");
         System.out.println("Cadena a pasar como argumento:");
@@ -155,20 +152,17 @@ public class PracticaMetodos {
         sc.nextLine();
         System.out.println("Número a pasar como argumento:");
         int entero = sc.nextInt();
-        System.out.println(print(arg,entero));
+        print(arg,entero);
 
     }
 
 
-    public static String print(String arg){
+    public static void print(String arg){
         System.out.println("\""+ arg +"\"");
-        arg =" "; //hicimos esto porque sino no ponia dos veces arg
-        return arg;
+         //hicimos esto porque sino no ponia dos veces arg
     }
-    public static String print(String arg,int entero){
+    public static void print(String arg, int entero){
         System.out.println("print"+"(" +"\""+ arg +"\""+", "+ entero +")");
-        arg =" "; //hicimos esto porque sino no ponia dos veces arg
-        return arg;
     }
     private static void Ejercicio5() {
         String enunciado = "Escribe un método llamado sumarValorPorÍndice. El método debe recibir un array de\n" +
@@ -177,26 +171,33 @@ public class PracticaMetodos {
                 "método no devuelve ningún valor. La siguiente invocación debería funcionar\n" +
                 "correctamente:\n" +
                 "sumarValorPorÍndice(array, índice, valor);";
+        System.out.println(enunciado);
         long[] array = new long[20];
         System.out.println();
 
-        for (int i = 0; i < array.length; i++) {
-
-        }
         }
 
-//        (long) (Math.random() * 100) + 1;
+    public static void sumarValorPorÍndice(long[] a,int ind,int val){
 
-
-    public static void sumarValorPorÍndice(){
 
     }
     private static void Ejercicio6() {
-        String enunciado = "hoola";
+        String enunciado = "Escribe un método llamado getPrimeroYÚltimo. El método recibe un array de enteros\n" +
+                "y devolver otro array de enteros. El array retornado debe contener dos elementos: el\n" +
+                "primero y el último de los elementos del array de entrada.";
+        System.out.println(enunciado);
+        int[] entero = new int[20];
+        getPrimeroYÚltimo(entero);
+
     }
-
-
-
+    public static void getPrimeroYÚltimo(int[] entero) {
+        for (int i = 0; i < entero.length; i++) {
+            entero[i] = (int) (Math.random() * 100 + 1);
+        }
+        int[] entero2 = {entero[0],entero[19]};
+        System.out.println(Arrays.toString(entero));
+        System.out.println(Arrays.toString(entero2));
+    }
 
 }
 

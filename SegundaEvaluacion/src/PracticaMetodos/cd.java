@@ -16,7 +16,7 @@ public class cd {
         long l = a[indice];
         System.out.println(l);
         int valor = sc.nextInt();
-        long z = a[indice] + valor;
-        System.out.println(z);
+        a[indice] = a[indice] + valor;
+        System.out.println(Arrays.toString(a));
     }
 }
