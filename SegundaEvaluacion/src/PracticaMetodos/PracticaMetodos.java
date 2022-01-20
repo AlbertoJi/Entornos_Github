@@ -18,86 +18,45 @@ public class PracticaMetodos {
     }
     private static void menu() {
         int opción;
-
+        boolean salir = false;
         do {
-            System.out.println("¿Que ejercicio quieres resolver? (1-6) y 7 para salir" );
+            System.out.println("¿Que ejercicio quieres resolver? (1-6)");
             opción = sc.nextInt();
-            switch (opción) {
-                case 1:
-                    System.out.println("1");
-                    Ejercicio1();
-                    System.out.println("Quieres resolver otro (s/n)");
-                    String seguir = sc.nextLine();
-                    if (seguir.equals("s") || seguir.equals("S")){
-                        menu();
-                    } else {
-                        opción = 7;
-
-                    }
-                    break;
-                case 2:
-                    Ejercicio2();
-                    System.out.println("Quieres resolver otro (s/n)");
-                    seguir = sc.nextLine();
-                    if (seguir.equals("s") || seguir.equals("S")){
-                        menu();
-                    } else {
-                        opción = 7;
-                    }
-                    break;
-                case 3:
-                    Ejercicio3();
-                    System.out.println("Quieres resolver otro (s/n)");
-                    seguir = sc.nextLine();
-                    seguir = sc.nextLine();
-                    System.out.println("peep");
-                    if (seguir.equals("s") || seguir.equals("S")){
-                        menu();
-                    } else {
-                        opción = 7;
-                    }
-                    break;
-                case 4:
-
-                    //Ejercicio4();
-                    System.out.println("Quieres resolver otro (s/n)");
-                    seguir = sc.nextLine();
-                    if (seguir.equals("s") || seguir.equals("S")){
-                        menu();
-                    } else {
-                        opción = 7;
-                    }
-                    break;
-                case 5:
-
-                    //Ejercicio5();
-                    System.out.println("Quieres resolver otro (s/n)");
-                    seguir = sc.nextLine();
-                    if (seguir.equals("s") || seguir.equals("S")){
-                        menu();
-                    } else {
-                        opción = 7;
-                    }
-                    break;
-                case 6:
-
-                    //Ejercicio6();
-                    System.out.println("Quieres resolver otro (s/n)");
-                    seguir = sc.nextLine();
-                    if (seguir.equals("s") || seguir.equals("S")){
-                        menu();
-                    } else {
-                        opción = 7;
-                    }
-                    break;
-                case 7:
-                    System.out.println("Salir");
-                    break;
-                default:
-                    System.out.println("Opción incorrecta.");
-
+            ResolverEjercicio(opción);
+            System.out.println("Quieres resolver otro (s/n)");
+            char respuesta = sc.next().charAt(0);
+            if (respuesta == 's' || respuesta == 'S'){
+                salir = false;
+            } else {
+                salir = true;
             }
-        } while (opción != 7);
+            
+        } while (!salir);
+    }
+    private static void ResolverEjercicio (int opción){
+        switch (opción) {
+            case 1:
+                System.out.println("1");
+                Ejercicio1();
+                break;
+            case 2:
+                Ejercicio2();
+                break;
+            case 3:
+                Ejercicio3();
+                break;
+            case 4:
+                Ejercicio4();
+                break;
+            case 5:
+                Ejercicio5();
+                break;
+            case 6:
+                Ejercicio6();
+                break;
+            default:
+                System.out.println("Opción incorrecta.");
+        }
     }
 
     private static void Ejercicio1() {
@@ -137,10 +96,12 @@ public class PracticaMetodos {
     }
 
     public static int sumaEnRango(int num1, int num2) {
-        for (int i = num1; i <= num2; i++) {
-            num1 = num1 + i;
+        int suma = 0;
+        for (int i = num1; i < num2; i++) {
+            suma =  suma + i;
+            System.out.println(suma);
         }
-        return num1;
+        return suma;
     }
     private static void Ejercicio3() {
         String enunciado = "Dado un método que recibe un valor long y devuelve el valor máximo del tipo long\n" +
@@ -155,6 +116,7 @@ public class PracticaMetodos {
         System.out.println("Resultado:" + getMaxMenosValor(val));
         System.out.println("Llamada del segundo metodo");
         int valo = sc.nextInt();
+        sc.nextLine();
         System.out.println("=========================");
         System.out.println("Resultado:" + getMaxMenosValor(valo));
 
@@ -170,17 +132,69 @@ public class PracticaMetodos {
     }
 
     private static void Ejercicio4() {
+        String enunciado = "Tenemos un método print(String arg). El método devuelve el nombre y su\n" +
+                "argumento (entre comillas, porque es un String). Por ejemplo, pasando el argumento\n" +
+                "“test”\n" +
+                "print(\"test\")\n" +
+                "Sobrecarga este método escribiendo un nuevo método con el mismo nombre y dos\n" +
+                "argumentos: un String y un entero. El nuevo método debe imprimir el nombre y los dos\n" +
+                "parámetros. Por ejemplo:\n" +
+                "print(\"test\", 4)";
+
+        System.out.println(enunciado);
+        System.out.println("Llamada del primer metodo");
+        System.out.println("=========================");
+        System.out.println("Cadena a pasar como argumento:");
+        String arg = sc.next();
+        sc.nextLine();
+        System.out.println(print(arg));
+        System.out.println("Llamada del segundo metodo");
+        System.out.println("=========================");
+        System.out.println("Cadena a pasar como argumento:");
+        arg = sc.next();
+        sc.nextLine();
+        System.out.println("Número a pasar como argumento:");
+        int entero = sc.nextInt();
+        System.out.println(print(arg,entero));
+
+    }
+
+
+    public static String print(String arg){
+        System.out.println("\""+ arg +"\"");
+        arg =" "; //hicimos esto porque sino no ponia dos veces arg
+        return arg;
+    }
+    public static String print(String arg,int entero){
+        System.out.println("print"+"(" +"\""+ arg +"\""+", "+ entero +")");
+        arg =" "; //hicimos esto porque sino no ponia dos veces arg
+        return arg;
+    }
+    private static void Ejercicio5() {
+        String enunciado = "Escribe un método llamado sumarValorPorÍndice. El método debe recibir un array de\n" +
+                "longs y sumar al elemento especificado por el índice el valor pasado. Parámetros que\n" +
+                "recibe: un array de longs, el índice de un elemento (int) y el valor a sumar (long). El\n" +
+                "método no devuelve ningún valor. La siguiente invocación debería funcionar\n" +
+                "correctamente:\n" +
+                "sumarValorPorÍndice(array, índice, valor);";
+        long[] array = new long[20];
+        System.out.println();
+
+        for (int i = 0; i < array.length; i++) {
+
+        }
+        }
+
+//        (long) (Math.random() * 100) + 1;
+
+
+    public static void sumarValorPorÍndice(){
+
+    }
+    private static void Ejercicio6() {
         String enunciado = "hoola";
     }
-    private static void ejercicio5() {
-        String enunciado = "hoola";
-    }
-    private static void ejercicio6() {
-        String enunciado = "hoola";
-    }
-    private static void ejercicio7() {
-        String enunciado = "hoola";
-    }
+
 
 
 
