@@ -1,4 +1,4 @@
-package PracticaMetodos;
+package Pooe;
 
 import java.util.Scanner;
 

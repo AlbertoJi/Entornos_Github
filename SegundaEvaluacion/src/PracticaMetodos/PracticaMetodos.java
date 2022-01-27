@@ -12,14 +12,14 @@ public class PracticaMetodos {
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        menu();
-
+        menu(); // Aquí es donde llamaremos al menu que hicimos más abajo
 
 
     }
+
     private static void menu() {
         int opción;
-        boolean salir = false;
+        boolean salir;// Hacemos un do while para  preguntar si quiere resolver otro ejerció o salir del programa
         do {
             System.out.println("¿Que ejercicio quieres resolver? (1-6)");
             opción = sc.nextInt();
@@ -27,11 +27,12 @@ public class PracticaMetodos {
             System.out.println("Quieres resolver otro (s/n)");
             char respuesta = sc.next().charAt(0);
             salir = respuesta != 's' && respuesta != 'S';
-            
+
         } while (!salir);
     }
-    private static void ResolverEjercicio (int opción){
-        switch (opción) {
+
+    private static void ResolverEjercicio(int opción) {
+        switch (opción) { //Aquí hacemos un método para seleccionar el ejercicio que queramos resolver
             case 1:
                 System.out.println("1");
                 Ejercicio1();
@@ -63,12 +64,12 @@ public class PracticaMetodos {
         System.out.println(enunciado);
         System.out.println("introducir numero");
         int n = sc.nextInt();
-        sc.nextLine(); //limpiamos el sc luego para poder el meter string necesario
+        sc.nextLine(); //limpiamos el sc luego para poder el meter string necesario porque puede dar algún error
 
         System.out.println(determinarSigno(n));
     }
 
-    private static  int determinarSigno(int numero) {
+    private static int determinarSigno(int numero) {
         if (numero > 0) {
             return 1;
         } else if (numero < 0) {
@@ -87,7 +88,7 @@ public class PracticaMetodos {
         int num2 = sc.nextInt();
 
         sc.nextLine();
-        System.out.println(sumaEnRango(num1,num2));
+        System.out.println(sumaEnRango(num1, num2));
 
 
     }
@@ -95,11 +96,12 @@ public class PracticaMetodos {
     public static int sumaEnRango(int num1, int num2) {
         int suma = 0;
         for (int i = num1; i < num2; i++) {
-            suma =  suma + i;
+            suma = suma + i;
             System.out.println(suma);
         }
         return suma;
     }
+
     private static void Ejercicio3() {
         String enunciado = "Dado un método que recibe un valor long y devuelve el valor máximo del tipo long\n" +
                 "menos el número dado:\n" +
@@ -119,13 +121,15 @@ public class PracticaMetodos {
 
 
     }
+
     public static long getMaxMenosValor(long val) {
 
         return Long.MAX_VALUE - val;
     }
+
     public static long getMaxMenosValor(int val) {
 
-        return Integer.MAX_VALUE - val;
+        return Integer.MAX_VALUE - val; // No vale con poner "int" tienes que decir el nombre entero de la variable
     }
 
     private static void Ejercicio4() {
@@ -145,25 +149,27 @@ public class PracticaMetodos {
         String arg = sc.next();
         sc.nextLine();
         print(arg);
-        System.out.println("Llamada del segundo metodo");
+        System.out.println("Llamad del segundo metodo");
         System.out.println("=========================");
         System.out.println("Cadena a pasar como argumento:");
-        arg = sc.next();
+        arg = sc.next(); // no hace falta poner un sout para llamar al método
         sc.nextLine();
         System.out.println("Número a pasar como argumento:");
         int entero = sc.nextInt();
-        print(arg,entero);
+        print(arg, entero);
 
     }
 
 
-    public static void print(String arg){
-        System.out.println("\""+ arg +"\"");
-         //hicimos esto porque sino no ponia dos veces arg
+    public static void print(String arg) {
+        System.out.println("\"" + arg + "\"");
+        // arg = " " Solución anterior Hicimos esto porque nos ponía dos veces arg y asi nos hacía "un hueco en blanco sin texto"
     }
-    public static void print(String arg, int entero){
-        System.out.println("print"+"(" +"\""+ arg +"\""+", "+ entero +")");
+
+    public static void print(String arg, int entero) {
+        System.out.println("print" + "(" + "\"" + arg + "\"" + ", " + entero + ")");
     }
+
     private static void Ejercicio5() {
         String enunciado = "Escribe un método llamado sumarValorPorÍndice. El método debe recibir un array de\n" +
                 "longs y sumar al elemento especificado por el índice el valor pasado. Parámetros que\n" +
@@ -172,14 +178,26 @@ public class PracticaMetodos {
                 "correctamente:\n" +
                 "sumarValorPorÍndice(array, índice, valor);";
         System.out.println(enunciado);
+        System.out.println("==========================================");
         long[] array = new long[20];
-        System.out.println();
+        int ind = 0;
+        int valor = 0;
+        sumarValorPorÍndice(array,ind,valor);
 
+    }
+
+    public static void sumarValorPorÍndice(long[] a,int ind,int valor) {
+        a = new long[20];
+        for (int i = 0; i < a.length; i++) {
+            a[i] = (int) (Math.random() * 100 + 1);
         }
-
-    public static void sumarValorPorÍndice(long[] a,int ind,int val){
-
-
+        System.out.println("Cadena: " + Arrays.toString(a));
+        System.out.print("Indice: ");
+        ind = sc.nextInt();
+        System.out.print("Valor: ");
+        valor = sc.nextInt();
+        a[ind] = a[ind] + valor;
+        System.out.println("Cadena cambiada: " + Arrays.toString(a));
     }
     private static void Ejercicio6() {
         String enunciado = "Escribe un método llamado getPrimeroYÚltimo. El método recibe un array de enteros\n" +
