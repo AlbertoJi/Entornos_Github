@@ -17,9 +17,17 @@ public class JefeDeEstación {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public String getDNI() {
+        return DNI;
     }
+
+    public String getFechanombra() {
+        return fechanombra;
+    }
+
+
+
+
 
 
 

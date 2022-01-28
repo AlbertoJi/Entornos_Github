@@ -2,10 +2,14 @@ package Pooe.Ferroviario.Personal;
 
 public class Mécanico {
     private String nombre;
-    static int mécanico;
+    private String teléfono;
+    private String especialidad;
+    public static int mécanico;
 
-    public Mécanico(String nombre) {
+    public Mécanico(String nombre, String teléfono, String especialidad) {
         this.nombre = nombre;
+        this.teléfono = teléfono;
+        this.especialidad = especialidad;
         mécanico++;
     }
 
@@ -13,8 +17,11 @@ public class Mécanico {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public String getTeléfono() {
+        return teléfono;
     }
 
+    public String getEspecialidad() {
+        return especialidad;
+    }
 }
