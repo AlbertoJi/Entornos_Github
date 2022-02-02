@@ -24,4 +24,25 @@ public class Mécanico {
     public String getEspecialidad() {
         return especialidad;
     }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setTeléfono(String teléfono) {
+        this.teléfono = teléfono;
+    }
+
+    public void setEspecialidad(String especialidad) {
+        this.especialidad = especialidad;
+    }
+
+
+    //Llamada para locomotora
+    public void Masignado() {
+        System.out.println("Mecánico: " + this.nombre + " Teléfono: " + this.teléfono + " especializa: " + this.especialidad);
+
+    }
+
+
 }

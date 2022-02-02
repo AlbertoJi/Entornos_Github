@@ -17,6 +17,6 @@ public class Main {
         edificio3.imprimeDatos();
 
 
-
+0
     }
 }

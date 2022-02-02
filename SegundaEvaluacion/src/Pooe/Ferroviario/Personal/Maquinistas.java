@@ -38,7 +38,20 @@ public class Maquinistas {
         return rango;
     }
 
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 
+    public void setDNI(String DNI) {
+        this.DNI = DNI;
+    }
 
+    public void setSueldo(double sueldo) {
+        this.sueldo = sueldo;
+    }
+
+    public void setRango(String rango) {
+        this.rango = rango;
+    }
 }
 

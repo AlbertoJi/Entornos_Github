@@ -10,7 +10,7 @@ public class Vagones {
     public Vagones(int indetificación, int carga_maxima, int carga_actual, String tipo_carga) {
         this.indetificación = indetificación;
         this.carga_maxima = carga_maxima;
-        this.carga_actual = carga_actual;
+        this.carga_actual = 0;
         this.tipo_carga = tipo_carga;
         vagones++;
     }
@@ -30,5 +30,22 @@ public class Vagones {
     public String getTipo_carga() {
         return tipo_carga;
     }
+
+    public void setIndetificación(int indetificación) {
+        this.indetificación = indetificación;
+    }
+
+    public void setCarga_maxima(int carga_maxima) {
+        this.carga_maxima = carga_maxima;
+    }
+
+    public void setCarga_actual(int carga_actual) {
+        this.carga_actual = carga_actual;
+    }
+
+    public void setTipo_carga(String tipo_carga) {
+        this.tipo_carga = tipo_carga;
+    }
+
 }
 

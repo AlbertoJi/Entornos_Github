@@ -25,10 +25,15 @@ public class JefeDeEstación {
         return fechanombra;
     }
 
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 
+    public void setDNI(String DNI) {
+        this.DNI = DNI;
+    }
 
-
-
-
-
+    public void setFechanombra(String fechanombra) {
+        this.fechanombra = fechanombra;
+    }
 }
