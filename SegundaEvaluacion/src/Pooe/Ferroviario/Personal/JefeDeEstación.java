@@ -36,4 +36,8 @@ public class JefeDeEstación {
     public void setFechanombra(String fechanombra) {
         this.fechanombra = fechanombra;
     }
+    public void Jasignado() {
+        System.out.println("Mecánico: " + this.nombre + " DNI: " + this.DNI + " nombramiento: " + this.fechanombra);
+
+    }
 }

@@ -47,5 +47,10 @@ public class Vagones {
         this.tipo_carga = tipo_carga;
     }
 
+    public void Vasignado() {
+        System.out.println("ID: " + this.indetificación + " carga_maxima: " + this.carga_maxima + " carga_actual: " + this.carga_actual + " Tipo: " + this.tipo_carga);
+
+    }
+
 }
 

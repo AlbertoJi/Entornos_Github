@@ -53,5 +53,9 @@ public class Maquinistas {
     public void setRango(String rango) {
         this.rango = rango;
     }
+    public void Maquiasignado() {
+        System.out.println("Mecánico: " + this.nombre + " DNI: " + this.DNI + " sueldo: " + this.sueldo + " rango "+ this.rango);
+
+    }
 }
 
