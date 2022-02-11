@@ -1,24 +1,26 @@
 package Pooe.Ferroviario.Maquinaria;
 
 import java.util.ArrayList;
-
-import static String.EjerciciosString.sc;
+import java.util.Scanner;
 
 public class Trenes {
-    static int trenes;
+
 
     static ArrayList<Vagones> tren = new ArrayList<Vagones>(5);
+
     public static void main(String[] args) {
         añadirvagon();
+
 
     }
 
 
+
+
     public static void añadirvagon() {
         int opción;
-        int cont = 0;
         int vagon = 1;
-
+        Scanner sc = new Scanner(System.in);
 
         System.out.println("¿Cuál es la carga máxima?");
         int carga = sc.nextInt();
@@ -28,29 +30,24 @@ public class Trenes {
         String tipo = null;
         switch (opción) {
             case 1:
-                System.out.println("Perecedera");
                 tipo = "Perecedera";
                 break;
             case 2:
-                System.out.println("No perecedera");
                 tipo = "No perecedera";
                 break;
             case 3:
-                System.out.println("Frágil");
                 tipo = "Frágil";
                 break;
             case 4:
-                System.out.println("Peligrosa");
                 tipo = "Peligrosa";
                 break;
             case 5:
-                System.out.println("Dimensional");
                 tipo = "Dimensional";
                 break;
         }
         Vagones vagones = new Vagones(1 + vagon, carga,0, tipo);
         vagon++;
-        if (tren.size() >= 5) {
+        if (tren.size() >= 1) {
             System.out.println("No se puede añadir mas vagones");
         } else {
             tren.add(vagones);
@@ -59,6 +56,14 @@ public class Trenes {
             añadirvagon();
         }
     }
-
+    class leerarray{
+        private String nombre;
+        void setNombre(String nombre){
+            this.nombre = nombre;
+        }
+        String getNombre(){
+            return nombre;
+        }
+    }
 
 }

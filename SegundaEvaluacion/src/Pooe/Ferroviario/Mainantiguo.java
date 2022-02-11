@@ -8,7 +8,7 @@ import Pooe.Ferroviario.Personal.Mécanico;
 import java.util.ArrayList;
 
 
-public class Main {
+public class Mainantiguo {
     public static void main(String[] args) {
         //Datos empleados
         Maquinistas u1 = new Maquinistas("Pepe", "12345678W",2000,"Carmarada");
@@ -20,9 +20,6 @@ public class Main {
         Mécanico g3 = new Mécanico("Daka","685412348","Frenador");
         //Datos maquinaria
         Locomotoras lo = new Locomotoras("132abc","350","2020");
-        lo.Locoasignado();
-
-
 
 
         ArrayList<String> tren = new ArrayList<>(4);
@@ -48,7 +45,11 @@ public class Main {
 
         System.out.println("Datos de locomotoras\n" +
                 "==========================================");
-        lo.setMecanico(g3);
+        System.out.print(" Matricula " + lo.getMatricula() + ", motores " + lo.getMotores() + ", año " + lo.getAño() + " " );
+        g3.Masignado();
+
+//            Vagones va = new Vagones("1",carga,getcargaactual);
+//            System.out.println(" Jefe de estación " + j1.getNombre() + ", Dni " + j1.getDNI() + ", nombramiento  " + j1.getFechanombra());
 
 
     }
@@ -56,4 +57,3 @@ public class Main {
 
 
 }
-

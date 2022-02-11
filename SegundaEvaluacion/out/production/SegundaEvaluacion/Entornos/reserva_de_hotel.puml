@@ -1,0 +1,48 @@
+@startuml
+title Reserva de hotel Trivago
+
+left to right direction
+actor admin
+actor cliente
+actor persona
+actor recepcionista as recep
+
+
+rectangle hotel {
+        usecase "Datos de reserva" as dar
+        usecase "Datos de cliente" as dac
+        usecase "cheking" as chek
+        usecase "Reserva de habitación" as rh
+        usecase "Reserva" as r
+        usecase "Estancia" as est
+        usecase "Registrar" as reg
+        usecase "anular reserva" as anu
+
+}
+
+
+cliente -- r : internet
+r -- admin : encarga
+cliente -- dar : cumplimentar
+reg -- recep : procede
+r -- recep : comprueba
+dac -- recep : comprueba
+est -- recep : facturar
+persona -- dac : introducir
+cliente ..> anu : <<extend>>
+cliente -- chek : chequea
+persona -- chek : chequea
+chek .up.> rh
+dar .right.> rh : <<include>>
+dac .left.> rh : <<include>>
+persona -left-|> cliente
+chek .up.> dac <<extend>>
+
+
+
+
+
+
+
+
+@enduml

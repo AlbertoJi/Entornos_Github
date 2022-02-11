@@ -1,5 +1,7 @@
 package Pooe.Ferroviario.Maquinaria;
 
+
+
 public class Vagones {
     private int indetificación;
     private int carga_maxima;
@@ -51,6 +53,7 @@ public class Vagones {
         System.out.println("ID: " + this.indetificación + " carga_maxima: " + this.carga_maxima + " carga_actual: " + this.carga_actual + " Tipo: " + this.tipo_carga);
 
     }
+
 
 }
 

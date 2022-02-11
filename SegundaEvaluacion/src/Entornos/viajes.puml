@@ -1,0 +1,52 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+title Viajes
+
+class Personas {
+  # String nombre
+  # String apellidos
+  # Date fecha_de_nacimiento
+  # String genero
+  + mostrarDatos():void
+  getters()
+  setter()
+}
+Personas "1..*" -- "1" vuelos
+
+
+enum genero {
+  hombre
+  mujer
+  otro
+}
+class vuelos{
+  + Date fecha_ofer
+  + int plazas
+}
+
+class aviones{
+  + String modelo_de_aviones
+  + int numero_de_aviones
+
+
+}
+aviones "1..*" -- "0..*" vuelos: soporte
+
+class billetes {
+  + int numeroplaza
+  + int edad
+  + String nombre
+  + String apellidos
+}
+(Personas,vuelos) .. billetes
+
+
+
+
+
+
+@enduml
+
+
+

@@ -1,0 +1,39 @@
+@startuml
+
+title Empresa-empleados-clientes
+
+class Personas {
+  # String nombre
+  # int edad
+  +mostrarDatos():void
+  getters()
+  setter()
+}
+class Empleados{
+  # float sueldoBruto
+}
+Personas <|-- Empleados
+
+class Clientes{
+  - String telefono
+  + getTelefono(): String
+  + setTelefono(String nuevoTelefono):void
+}
+
+Personas <|-- Clientes
+
+class Directivo {
+  - int categoria
+  + getCategoria():int
+  + setCategoria(int nuevaCategoria):void
+}
+
+Empleados "1..*" <|-- "1" Directivo : tiene
+
+Class Empresas{
+  # String nombre
+  # String nif
+}
+Empresas "1" *-- "1..*" Empleados : tiene
+Empresas  "0..*" o-- "0..*" Clientes : tiene
+@enduml
