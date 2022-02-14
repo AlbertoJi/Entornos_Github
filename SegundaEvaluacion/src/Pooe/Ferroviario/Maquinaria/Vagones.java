@@ -4,12 +4,12 @@ package Pooe.Ferroviario.Maquinaria;
 
 public class Vagones {
     private int indetificación;
-    private int carga_maxima;
-    private int carga_actual;
-    private String tipo_carga;
+    private Double carga_maxima;
+    private int carga_actual; // Nos dijiste 0 lo dejamos en int
+    Tipo_carga tipo_carga;
     public static int vagones;
 
-    public Vagones(int indetificación, int carga_maxima, int carga_actual, String tipo_carga) {
+    public Vagones(int indetificación, Double carga_maxima, int carga_actual, Tipo_carga tipo_carga) {
         this.indetificación = indetificación;
         this.carga_maxima = carga_maxima;
         this.carga_actual = 0;
@@ -17,11 +17,13 @@ public class Vagones {
         vagones++;
     }
 
+
+
     public int getIndetificación() {
         return indetificación;
     }
 
-    public int getCarga_maxima() {
+    public Double getCarga_maxima() {
         return carga_maxima;
     }
 
@@ -29,7 +31,7 @@ public class Vagones {
         return carga_actual;
     }
 
-    public String getTipo_carga() {
+    public Tipo_carga getTipo_carga() {
         return tipo_carga;
     }
 
@@ -37,7 +39,7 @@ public class Vagones {
         this.indetificación = indetificación;
     }
 
-    public void setCarga_maxima(int carga_maxima) {
+    public void setCarga_maxima(Double carga_maxima) {
         this.carga_maxima = carga_maxima;
     }
 
@@ -45,15 +47,26 @@ public class Vagones {
         this.carga_actual = carga_actual;
     }
 
-    public void setTipo_carga(String tipo_carga) {
+    public void setTipo_carga(Tipo_carga tipo_carga) {
         this.tipo_carga = tipo_carga;
     }
 
-    public void Vasignado() {
-        System.out.println("ID: " + this.indetificación + " carga_maxima: " + this.carga_maxima + " carga_actual: " + this.carga_actual + " Tipo: " + this.tipo_carga);
-
+//    public String Vasignado() {
+//        System.out.println("ID: " + this.indetificación + " carga_maxima: " + this.carga_maxima + " carga_actual: " + this.carga_actual + " Tipo: " + this.tipo_carga);
+//        return null;
+//    }
+    public void Vasignado(){
+        System.out.println(toString());
     }
 
-
+    @Override
+    public String toString() {
+        return "Vagones{" +
+                "indetificación=" + indetificación +
+                ", carga_maxima=" + carga_maxima +
+                ", carga_actual=" + carga_actual +
+                ", tipo_carga=" + tipo_carga +
+                '}';
+    }
 }
 

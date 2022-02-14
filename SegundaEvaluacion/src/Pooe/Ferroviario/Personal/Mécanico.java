@@ -3,10 +3,10 @@ package Pooe.Ferroviario.Personal;
 public class Mécanico {
     private String nombre;
     private String teléfono;
-    private String especialidad;
+    especialidad especialidad;
     public static int mécanico;
 
-    public Mécanico(String nombre, String teléfono, String especialidad) {
+    public Mécanico(String nombre, String teléfono, especialidad especialidad) {
         this.nombre = nombre;
         this.teléfono = teléfono;
         this.especialidad = especialidad;
@@ -21,7 +21,7 @@ public class Mécanico {
         return teléfono;
     }
 
-    public String getEspecialidad() {
+    public Pooe.Ferroviario.Personal.especialidad getEspecialidad() {
         return especialidad;
     }
 
@@ -33,7 +33,7 @@ public class Mécanico {
         this.teléfono = teléfono;
     }
 
-    public void setEspecialidad(String especialidad) {
+    public void setEspecialidad(especialidad especialidad) {
         this.especialidad = especialidad;
     }
 
@@ -44,5 +44,12 @@ public class Mécanico {
 
     }
 
-
+    @Override
+    public String toString() {
+        return "Mécanico{" +
+                "nombre='" + nombre + '\'' +
+                ", teléfono='" + teléfono + '\'' +
+                ", especialidad=" + especialidad +
+                '}';
+    }
 }

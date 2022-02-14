@@ -53,9 +53,24 @@ public class Maquinistas {
     public void setRango(String rango) {
         this.rango = rango;
     }
-    public void Maquiasignado() {
-        System.out.println("Mecánico: " + this.nombre + " DNI: " + this.DNI + " sueldo: " + this.sueldo + " rango "+ this.rango);
 
+    public void Maquiasignado(){
+        System.out.println(toString());
     }
+
+    @Override
+    public String toString() {
+        return "Maquinistas{" +
+                "nombre='" + nombre + '\'' +
+                ", DNI='" + DNI + '\'' +
+                ", sueldo=" + sueldo +
+                ", rango='" + rango + '\'' +
+                '}';
+    }
+    //Pruebas
+//    public void Maquiasignado() {
+//        System.out.println("Maquinista: " + this.nombre + " DNI: " + this.DNI + " sueldo: " + this.sueldo + " rango "+ this.rango);
+//
+//    }
 }
 

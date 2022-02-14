@@ -1,16 +1,19 @@
 package Pooe.Ferroviario.Maquinaria;
 
+import Pooe.Ferroviario.Personal.Mécanico;
+
 public class Locomotoras {
     private String matricula;
     private String motores;
     private String año;
-    private String Mécanico;
+    Mécanico mecanico;
     public static int locomotoras;
 
-    public Locomotoras(String matricula, String motores, String año) {
+    public Locomotoras(String matricula, String motores, String año,Mécanico mecanico) {
         this.matricula = matricula;
         this.motores = motores;
         this.año = año;
+        this.mecanico = mecanico;
         locomotoras++;
     }
 
@@ -41,20 +44,27 @@ public class Locomotoras {
         this.año = año;
     }
 
-    public void setMecanico(String Mécanico) {
-        this.Mécanico = Mécanico;
-    }
-    public void setMecanico(Pooe.Ferroviario.Personal.Mécanico g3) {
+
+    public void setMecanico(Mécanico mecanico) {
     }
 
-    public void Locoasignado() {
-        System.out.println("Matricula: " + this.matricula +" potencia: "+ this.motores + " Año de Fabricación: " + this.año + " Mecanico: " + this.Mécanico);
-
-
-
-
+    @Override
+    public String toString() {
+        return "Locomotoras{" +
+                "matricula='" + matricula + '\'' +
+                ", motores='" + motores + '\'' +
+                ", año='" + año + '\'' +
+                ", mecanico=" + mecanico +
+                '}';
     }
+    public void mostrar(){
+        System.out.println(toString());
+    }
+    // Esto es una prueba del anterior modelo Ignorar
+    public String Locoasignado() {
+        System.out.println("Matricula: " + this.matricula +" potencia: "+ this.motores + " Año de Fabricación: " + this.año + this.mecanico);
 
-
+        return null;
+    }
 
 }

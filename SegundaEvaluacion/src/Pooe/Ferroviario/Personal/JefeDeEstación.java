@@ -37,7 +37,7 @@ public class JefeDeEstación {
         this.fechanombra = fechanombra;
     }
     public void Jasignado() {
-        System.out.println("Mecánico: " + this.nombre + " DNI: " + this.DNI + " nombramiento: " + this.fechanombra);
+        System.out.println("Jefe de estación: " + this.nombre + " DNI: " + this.DNI + " nombramiento: " + this.fechanombra);
 
     }
 }
