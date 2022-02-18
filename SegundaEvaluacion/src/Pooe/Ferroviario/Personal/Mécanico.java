@@ -52,4 +52,5 @@ public class Mécanico {
                 ", especialidad=" + especialidad +
                 '}';
     }
+
 }

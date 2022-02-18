@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<noticias>
+  <noticia dia="22-10-2020" >
+    <titulo> Ejemplo </titulo>
+    <autor> Anonymous</autor >
+    <url direccion="http://www.blabla.es"> blabla.es </url>
+    <texto> TEXTO1 </texto >
+    <foto>http://www.blabla.es/122.jpg</foto>
+  </noticia>
+  <noticia dia="12-12-2012">
+    <titulo> Ejemplo2 </titulo>
+    <autor> Otro </autor >
+    <url direccion="http://www.blabla.es"> blabla.es </url>
+    <texto> TEXTO2</texto >
+    <foto>http://www.blabla.es/123.jpg</foto>
+  </noticia>
+</noticias>

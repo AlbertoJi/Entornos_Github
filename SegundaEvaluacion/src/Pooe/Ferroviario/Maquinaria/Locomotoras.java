@@ -61,10 +61,8 @@ public class Locomotoras {
         System.out.println(toString());
     }
     // Esto es una prueba del anterior modelo Ignorar
-    public String Locoasignado() {
-        System.out.println("Matricula: " + this.matricula +" potencia: "+ this.motores + " Año de Fabricación: " + this.año + this.mecanico);
 
-        return null;
-    }
+
+
 
 }

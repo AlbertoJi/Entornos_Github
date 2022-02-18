@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<libreria>
-    <libro categoria="1">
-        <titulo>1000 recetas de oro</titulo>
-        <autor>Karlos Arguiñano</autor>
-        <anyo>2016</anyo>
-        <precio>18.95</precio>
-    </libro>
+<libreria><libro categoria="1">
+    <titulo>1000 recetas de oro</titulo>
+    <autor>Karlos Arguiñano</autor>
+    <anyo>2016</anyo>
+    <precio>18.95</precio>
+</libro>
 </libreria>

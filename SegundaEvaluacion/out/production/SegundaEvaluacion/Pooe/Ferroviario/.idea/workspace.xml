@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="df48fdc8-8b18-4cd8-8f25-43c32eeacb4e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../SegundaEvaluacion/out/production/SegundaEvaluacion/Pooe/Ferroviario/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SegundaEvaluacion/out/production/SegundaEvaluacion/Pooe/Ferroviario/Maquinaria/Locomotoras.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SegundaEvaluacion/out/production/SegundaEvaluacion/Pooe/Ferroviario/Maquinaria/Tipo_carga.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SegundaEvaluacion/out/production/SegundaEvaluacion/Pooe/Ferroviario/Personal/especialidad.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SegundaEvaluacion/out/production/SegundaEvaluacion/Pooe/Ferroviario/Maquinaria/Trenes$leerarray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SegundaEvaluacion/out/production/SegundaEvaluacion/Pooe/Ferroviario/Maquinaria/Trenes.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SegundaEvaluacion/out/production/SegundaEvaluacion/Pooe/Ferroviario/Maquinaria/Trenes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SegundaEvaluacion/out/production/SegundaEvaluacion/Pooe/Ferroviario/Maquinaria/Vagones.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SegundaEvaluacion/out/production/SegundaEvaluacion/Pooe/Ferroviario/Maquinaria/Vagones.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SegundaEvaluacion/out/production/SegundaEvaluacion/Pooe/Ferroviario/Personal/JefeDeEstación.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SegundaEvaluacion/out/production/SegundaEvaluacion/Pooe/Ferroviario/Personal/JefeDeEstación.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SegundaEvaluacion/out/production/SegundaEvaluacion/Pooe/Ferroviario/Personal/Maquinistas.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SegundaEvaluacion/out/production/SegundaEvaluacion/Pooe/Ferroviario/Personal/Maquinistas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SegundaEvaluacion/out/production/SegundaEvaluacion/Pooe/Ferroviario/Personal/Mécanico.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SegundaEvaluacion/out/production/SegundaEvaluacion/Pooe/Ferroviario/Personal/Mécanico.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SegundaEvaluacion/src/Pooe/Ferroviario/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SegundaEvaluacion/src/Pooe/Ferroviario/Mainantiguo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SegundaEvaluacion/src/Pooe/Ferroviario/Maquinaria/Locomotoras.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SegundaEvaluacion/src/Pooe/Ferroviario/Maquinaria/Trenes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SegundaEvaluacion/src/Pooe/Ferroviario/Maquinaria/Vagones.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SegundaEvaluacion/src/Pooe/Ferroviario/Personal/JefeDeEstación.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SegundaEvaluacion/src/Pooe/Ferroviario/Personal/Maquinistas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SegundaEvaluacion/src/Pooe/Ferroviario/Personal/Mécanico.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="256tHsVWYbH0cYAyVSSltuhIrXX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="df48fdc8-8b18-4cd8-8f25-43c32eeacb4e" name="Changes" comment="" />
+      <created>1644859278630</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1644859278630</updated>
+      <workItem from="1644859279916" duration="9000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
