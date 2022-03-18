@@ -1,0 +1,37 @@
+@startuml
+
+class Persona {
+#String nombre
+#int numero_de_teléfono
+#String dirección
+}
+
+class Cliente {
+String DNI
+}
+Persona <|-- Cliente
+class Mensajero {
+int Núm_de_contrato
+}
+Persona <|-- Mensajero
+class Oficina {
+ String nombre
+ String dirección
+}
+Mensajero "1"-- "1..*" Oficina : trabaja
+Cliente "1" -- "1..*" Oficina : asociado
+class Paquete {
+String codigo
+
+}
+ Paquete -- Cliente
+ Paquete -- Oficina : puesto en ruta
+ Paquete "1"--"1..*" Mensajero : asignado
+class Enviar{
+
+}
+
+
+
+
+@enduml

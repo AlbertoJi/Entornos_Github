@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--Si no funciona cambiar ruta-->
+<?xml-stylesheet type="text/xsl" href="LM\ejercicio3\gimnasio.xsl"?>
+<gimnasio>
+  <monitores><!--Monitores que actualmente trabajan en el gimnasio-->
+    <monitor codigo="m001">
+      <nombre>Mario</nombre>
+      <apellidos>Cansado Pérez</apellidos>
+      <telefono>968222222</telefono>
+      <salario>1200</salario>
+    </monitor>
+    <monitor codigo="m002">
+      <nombre>María</nombre>
+      <apellidos>Talón Rodríguez</apellidos>
+      <telefono>606060606</telefono>
+      <salario>1300</salario>
+    </monitor>
+    <monitor codigo="m003">
+      <nombre>María José</nombre>
+      <apellidos>Sáez Soriano</apellidos>
+      <telefono>699999999</telefono>
+      <salario>1200</salario>
+    </monitor>
+    <monitor codigo="m004">
+      <nombre>Anselmo</nombre>
+      <apellidos>Solera García</apellidos>
+      <telefono>968777777</telefono>
+      <salario>900</salario>
+    </monitor>
+    <monitor codigo="m005">
+      <nombre>Barío Son, Calisto</nombre>
+      <apellidos>Barío Son</apellidos>
+      <telefono>78536547</telefono>
+      <salario>900</salario>
+    </monitor>
+  </monitores>
+
+
+  <actividades><!--Las actividades podrán ser modificadas tanto en horario como el monitor asignado-->
+    <actividad codigo="a10">
+      <nombre>Pilates</nombre>
+      <duracion>55</duracion>
+      <intensidad>Ligero</intensidad>
+      <lugar>Sala Fitness</lugar>
+      <horario>
+        <sesion>
+          <día>Lunes</día>
+          <horas>
+            <hora>8:00</hora>
+            <hora>16:00</hora>
+          </horas>
+        </sesion>
+        <sesion>
+          <día>Miércoles</día>
+          <horas>
+            <hora>9:00</hora>
+            <hora>16:00</hora>
+          </horas>
+        </sesion>
+      </horario>
+      <monitores>
+        <monitor codiga="m001"/>
+      </monitores>
+    </actividad>
+    <actividad codigo="a20">
+      <nombre>Crosstraining</nombre>
+      <duracion>55</duracion>
+      <intensidad>Fuerte</intensidad>
+      <lugar>Sala Fitness</lugar>
+      <horario>
+        <sesion>
+          <día>Martes</día>
+          <horas>
+            <hora>10:00</hora>
+            <hora>16:00</hora>
+            <hora>20:00</hora>
+          </horas>
+        </sesion>
+      </horario>
+      <monitores>
+        <monitor codiga="m002"/>
+        <monitor codiga="m003"/>
+      </monitores>
+    </actividad>
+    <actividad codigo="a30">
+      <nombre>Ciclo indoor</nombre>
+      <duracion>45</duracion>
+      <intensidad>Ligero</intensidad>
+      <lugar>Sala ciclo</lugar>
+      <horario>
+        <sesion>
+          <día>Miércoles</día>
+          <horas>
+            <hora>17:00</hora>
+          </horas>
+        </sesion>
+        <sesion>
+          <día>Jueves</día>
+          <horas>
+            <hora>17:00</hora>
+          </horas>
+        </sesion>
+      </horario>
+      <monitores>
+        <monitor codiga="m004"/>
+      </monitores>
+    </actividad>
+    <actividad codigo="a40">
+      <nombre>Running</nombre>
+      <duracion>55</duracion>
+      <intensidad>Ligero</intensidad>
+      <lugar>Exterior</lugar>
+      <horario>
+        <sesion>
+          <día>Lunes</día>
+          <horas>
+            <hora>9:00</hora>
+          </horas>
+        </sesion>
+        <sesion>
+          <día>Miércoles</día>
+          <horas>
+            <hora>9:00</hora>
+          </horas>
+        </sesion>
+        <sesion>
+          <día>Viernes</día>
+          <horas>
+            <hora>9:00</hora>
+          </horas>
+        </sesion>
+      </horario>
+      <monitores>
+        <monitor codiga="m004"/>
+        <monitor codiga="m005"/>
+      </monitores>
+    </actividad>
+    <actividad codigo="a50">
+      <nombre>BodyPump</nombre>
+      <duracion>55</duracion>
+      <intensidad>Fuerte</intensidad>
+      <lugar>Sala Fitness</lugar>
+      <horario>
+        <sesion>
+          <día>Martes</día>
+          <horas>
+            <hora>12:00</hora>
+            <hora>15:00</hora>
+          </horas>
+        </sesion>
+        <sesion>
+          <día>Jueves</día>
+          <horas>
+            <hora>12:00</hora>
+            <hora>15:00</hora>
+          </horas>
+        </sesion>
+      </horario>
+      <monitores>
+        <monitor codiga="m001"/>
+      </monitores>
+    </actividad>
+  </actividades>
+</gimnasio>

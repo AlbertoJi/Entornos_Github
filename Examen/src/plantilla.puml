@@ -1,0 +1,93 @@
+@startuml
+
+
+title Plataforma de apredizaje
+class Persona{
+  #String nombre
+  #String dirección
+  #String teléfono
+  #String alias
+  #String email
+}
+
+class Alumno{
+  - float notaMedia
+  + getNotaMedia():float
+  +setNotaMedia(float nuevaNota):void
+  +emitirCertificado():void
+  +calcularNotaMedia():float
+}
+Persona <|--Alumno
+
+class Profesor{
+  - String NRP
+  + getNRP():String
+  + setNRP(String nuevoNRP):void
+}
+Persona <|--Profesor
+
+class Módulo{
+  - String nombre
+  - int duración
+  - String contenidos
+  + getNombre():String
+  + setNombre(String n):void
+  + getDuración():int
+  + setDuración(int d):void
+  + getContenidos():String
+  + setContenidos(String c):void
+  + matricular(Alumno a):void
+  + asignarDuración(int d):void
+}
+Alumno "0..*" -- "1..*" Módulo : se matricula en
+Profesor "1" -- "1..*" Módulo : imparte
+
+class Competencia{
+  - String descripcion
+  + getDescripcion():String
+  + setDescripcion(String d):void
+}
+Módulo "1" --* "1..*" Competencia : compuesto por
+
+class Examen{
+  + calificar():double
+  + anadirPregunta()
+  + ordenarPregunta()
+  + crearExamen()
+}
+Módulo "1" *-- "1" Examen : tiene
+
+class Tarea{
+  - String descripcion
+  + getDescripcion():String
+  + setDescripcion(String d):void
+}
+Módulo "1" *-- "1" Tarea : tiene
+
+class CicloFormativo{
+  - String nombre
+  - String descripcion
+  - int horas
+  + getNombre():String
+  + setNombre(String n):void
+  + getDescripcion(): String
+  + setDescripcion(String d):void
+  + getHoras():int
+  + setHoras(int h):void
+}
+Competencia "1..*" --* "1" CicloFormativo  : compuesto por
+
+class Pregunta{
+  - String enunciado
+  - String[] respuestas
+  - int respuestaValida
+  + getEnunciado():String
+  + setEnunciado(String e):void
+  + getRespuestas(): String[]
+  + setRespuestas(String []):void
+  + getRespuestaValida():int
+  + setRespuestaValida(int r):void
+}
+Examen "0..*" o-- "30" Pregunta  : se compone de
+
+@enduml
